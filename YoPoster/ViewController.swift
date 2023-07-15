@@ -74,6 +74,13 @@ class ViewController: UIViewController {
     @objc private func pickerImageViewTapped() {
         showPhotoPicker()
     }
+    
+    @IBAction func resetBarButtonTapped(_ sender: Any) {
+        postTextView.text = ""
+        image = nil
+        pickerImageView.contentMode = .center
+        pickerImageView.image = UIImage(systemName: "photo.on.rectangle")
+    }
 }
 
 // MARK: - Image Picker

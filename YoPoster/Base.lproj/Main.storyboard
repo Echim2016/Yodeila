@@ -49,6 +49,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MER-Ca-DQJ">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.counterclockwise" catalog="system" id="qQe-kz-lJk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="resetBarButtonTapped:" destination="BYZ-38-t0r" id="VDC-bu-0fS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="gCU-GO-Cjj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -83,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
