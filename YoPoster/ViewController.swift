@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         
         let pickerImageViewTapped = UITapGestureRecognizer(target: self, action: #selector(pickerImageViewTapped))
         pickerImageView.addGestureRecognizer(pickerImageViewTapped)
+        
+        let backgroundViewTapped = UITapGestureRecognizer(target: self, action: #selector(backgroundViewTapped))
+        view.addGestureRecognizer(backgroundViewTapped)
     }
     
     private func setupBarButtonItems() {
@@ -73,6 +76,10 @@ class ViewController: UIViewController {
     
     @objc private func pickerImageViewTapped() {
         showPhotoPicker()
+    }
+    
+    @objc private func backgroundViewTapped() {
+        view.endEditing(true)
     }
     
     @IBAction func resetBarButtonTapped(_ sender: Any) {
