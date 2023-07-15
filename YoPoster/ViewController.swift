@@ -47,6 +47,7 @@ class ViewController: UIViewController {
                 let items: [Any] = [
                     self?.image,
                 ]
+                UIPasteboard.general.string = self?.postTextView.text
                 self?.share(with: items)
             }
         )
@@ -59,7 +60,6 @@ class ViewController: UIViewController {
                     self?.postTextView.text,
                     self?.image,
                 ]
-                
                 self?.share(with: items)
             }
         )
