@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = "YoPoster"
+        title = "Yodeila"
         postTextView.layer.cornerRadius = 12
         postTextView.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         pickerImageView.layer.cornerRadius = 12
