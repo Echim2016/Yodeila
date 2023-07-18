@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupGestures()
         setupBarButtonItems()
     }
     
@@ -36,7 +37,9 @@ class ViewController: UIViewController {
         postTextView.layer.cornerRadius = 12
         postTextView.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         pickerImageView.layer.cornerRadius = 12
-        
+    }
+    
+    private func setupGestures() {
         let pickerImageViewTapped = UITapGestureRecognizer(target: self, action: #selector(pickerImageViewTapped))
         pickerImageView.addGestureRecognizer(pickerImageViewTapped)
         
