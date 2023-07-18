@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C99E2302A66C4A500895334 /* UIMenuActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E22F2A66C4A500895334 /* UIMenuActionBuilder.swift */; };
 		9CC15A3D2A59B2000087EAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC15A3C2A59B2000087EAF2 /* AppDelegate.swift */; };
 		9CC15A3F2A59B2000087EAF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC15A3E2A59B2000087EAF2 /* SceneDelegate.swift */; };
 		9CC15A412A59B2000087EAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC15A402A59B2000087EAF2 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C99E22F2A66C4A500895334 /* UIMenuActionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuActionBuilder.swift; sourceTree = "<group>"; };
 		9CC15A392A59B2000087EAF2 /* YoPoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoPoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC15A3C2A59B2000087EAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC15A3E2A59B2000087EAF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C99E2262A66C41800895334 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CC15A402A59B2000087EAF2 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C99E2272A66C43A00895334 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E22F2A66C4A500895334 /* UIMenuActionBuilder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		9CC15A302A59B2000087EAF2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +117,10 @@
 		9CC15A3B2A59B2000087EAF2 /* YoPoster */ = {
 			isa = PBXGroup;
 			children = (
+				9C99E2272A66C43A00895334 /* Helper */,
+				9C99E2262A66C41800895334 /* ViewController */,
 				9CC15A3C2A59B2000087EAF2 /* AppDelegate.swift */,
 				9CC15A3E2A59B2000087EAF2 /* SceneDelegate.swift */,
-				9CC15A402A59B2000087EAF2 /* ViewController.swift */,
 				9CC15A422A59B2000087EAF2 /* Main.storyboard */,
 				9CC15A452A59B2010087EAF2 /* Assets.xcassets */,
 				9CC15A472A59B2010087EAF2 /* LaunchScreen.storyboard */,
@@ -258,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C99E2302A66C4A500895334 /* UIMenuActionBuilder.swift in Sources */,
 				9CC15A412A59B2000087EAF2 /* ViewController.swift in Sources */,
 				9CC15A3D2A59B2000087EAF2 /* AppDelegate.swift in Sources */,
 				9CC15A3F2A59B2000087EAF2 /* SceneDelegate.swift in Sources */,
@@ -436,21 +456,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VCPLDP9723;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoPoster/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yodeila;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.echim.YoPoster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -465,21 +487,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VCPLDP9723;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoPoster/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yodeila;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.echim.YoPoster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
