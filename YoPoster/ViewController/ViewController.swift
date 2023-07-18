@@ -65,9 +65,18 @@ class ViewController: UIViewController {
         
         switch destination {
         case .instagram:
+            guard let image else {
+                showAlert(title: "Oops", message: "Please upload a photo for sharing.")
+                return
+            }
             UIPasteboard.general.string = postTextView.text
             items = [image]
+            
         case .twitter:
+            guard !postTextView.text.isEmpty || image != nil else {
+                showAlert(title: "Oops", message: "Please provide the content for sharing.")
+                return
+            }
             items = [postTextView.text, image]
         }
         
@@ -93,6 +102,17 @@ class ViewController: UIViewController {
         image = nil
         pickerImageView.contentMode = .center
         pickerImageView.image = UIImage(systemName: "photo.on.rectangle")
+    }
+}
+
+// MARK: - Alert
+extension ViewController {
+    private func showAlert(title: String, message: String = "") {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(title: "OK",style: .default)
+        )
+        present(alert, animated: true)
     }
 }
 
