@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C99E2302A66C4A500895334 /* UIMenuActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C99E22F2A66C4A500895334 /* UIMenuActionBuilder.swift */; };
 		9CC15A3D2A59B2000087EAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC15A3C2A59B2000087EAF2 /* AppDelegate.swift */; };
 		9CC15A3F2A59B2000087EAF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC15A3E2A59B2000087EAF2 /* SceneDelegate.swift */; };
 		9CC15A412A59B2000087EAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC15A402A59B2000087EAF2 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C99E22F2A66C4A500895334 /* UIMenuActionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuActionBuilder.swift; sourceTree = "<group>"; };
 		9CC15A392A59B2000087EAF2 /* YoPoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoPoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC15A3C2A59B2000087EAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC15A3E2A59B2000087EAF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C99E2262A66C41800895334 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CC15A402A59B2000087EAF2 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C99E2272A66C43A00895334 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9C99E22F2A66C4A500895334 /* UIMenuActionBuilder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		9CC15A302A59B2000087EAF2 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +117,10 @@
 		9CC15A3B2A59B2000087EAF2 /* YoPoster */ = {
 			isa = PBXGroup;
 			children = (
+				9C99E2272A66C43A00895334 /* Helper */,
+				9C99E2262A66C41800895334 /* ViewController */,
 				9CC15A3C2A59B2000087EAF2 /* AppDelegate.swift */,
 				9CC15A3E2A59B2000087EAF2 /* SceneDelegate.swift */,
-				9CC15A402A59B2000087EAF2 /* ViewController.swift */,
 				9CC15A422A59B2000087EAF2 /* Main.storyboard */,
 				9CC15A452A59B2010087EAF2 /* Assets.xcassets */,
 				9CC15A472A59B2010087EAF2 /* LaunchScreen.storyboard */,
@@ -258,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C99E2302A66C4A500895334 /* UIMenuActionBuilder.swift in Sources */,
 				9CC15A412A59B2000087EAF2 /* ViewController.swift in Sources */,
 				9CC15A3D2A59B2000087EAF2 /* AppDelegate.swift in Sources */,
 				9CC15A3F2A59B2000087EAF2 /* SceneDelegate.swift in Sources */,

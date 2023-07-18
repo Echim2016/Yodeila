@@ -11,6 +11,11 @@ import PhotosUI
 
 class ViewController: UIViewController {
     
+    enum ShareDestination {
+        case instagram
+        case twitter
+    }
+    
     // MARK: - Subviews
     @IBOutlet weak var shareBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var postTextView: UITextView!
@@ -23,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        setupGestures()
         setupBarButtonItems()
     }
     
@@ -31,7 +37,9 @@ class ViewController: UIViewController {
         postTextView.layer.cornerRadius = 12
         postTextView.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         pickerImageView.layer.cornerRadius = 12
-        
+    }
+    
+    private func setupGestures() {
         let pickerImageViewTapped = UITapGestureRecognizer(target: self, action: #selector(pickerImageViewTapped))
         pickerImageView.addGestureRecognizer(pickerImageViewTapped)
         
@@ -40,32 +48,30 @@ class ViewController: UIViewController {
     }
     
     private func setupBarButtonItems() {
-        let shareToInstagramAction = UIAction(
-            title: "Instagram",
-            image: nil,
-            handler: { [weak self] action in
-                let items: [Any] = [
-                    self?.image,
-                ]
-                UIPasteboard.general.string = self?.postTextView.text
-                self?.share(with: items)
+        shareBarButtonItem.menu = UIMenuActionBuilder()
+            .actions {
+                Action(title: "Instagram") { [weak self] _ in
+                    self?.share(to: .instagram)
+                }
+                Action(title: "Twitter") { [weak self] _ in
+                    self?.share(to: .twitter)
+                }
             }
-        )
+            .build()
+    }
+    
+    private func share(to destination: ShareDestination) {
+        var items: [Any] = []
         
-        let shareToTwitterAction = UIAction(
-            title: "Twitter",
-            image: nil,
-            handler: { [weak self] action in
-                let items: [Any] = [
-                    self?.postTextView.text,
-                    self?.image,
-                ]
-                self?.share(with: items)
-            }
-        )
+        switch destination {
+        case .instagram:
+            UIPasteboard.general.string = postTextView.text
+            items = [image]
+        case .twitter:
+            items = [postTextView.text, image]
+        }
         
-        let menu = UIMenu(children: [shareToInstagramAction, shareToTwitterAction])
-        shareBarButtonItem.menu = menu
+        share(with: items)
     }
     
     private func share(with items: [Any]) {
